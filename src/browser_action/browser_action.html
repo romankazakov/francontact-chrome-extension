@@ -1,17 +1,20 @@
 <!doctype html>
 <head>
 
-<link rel="stylesheet" href="./../../css/bootstrap.min.css">
-<link rel="stylesheet" href="./../../css/main.css">
-<link rel="javascript" href="./../../js/jquery/jquery.min.js">
-<link rel="javascript" href="./../../js/app.js">
-<link rel="javascript" href="./../../js/bindings.js">
+<link rel="stylesheet" href="../../css/bootstrap.min.css">
+<link rel="stylesheet" href="../../css/main.css">
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/app.js"></script>
+<script src="../../js/bindings.js"></script>
 
 </head>
 
 <body>
+<div class="contaner">
 
-<ul class="nav nav-tabs width520">
+ <ul class="nav nav-tabs width520">
   <li class="active width50percents">
   	<a data-toggle="tab" href="#tasks">Tasks</a>
   </li>
@@ -20,15 +23,20 @@
   </li>
 </ul>
 
-<div class="tab-content">
+<div class="tab-content padding20">
   <div id="tasks" class="tab-pane fade in active">
      <h3>Menu 1</h3>
      <p>Some content.</p>
+  	 <div class="pull-left"><a id="settings"href="#">Settings</a></div>
+  	 <div class="pull-right"><a id="settings" href="#">Settings</a></div>
   </div>
   <div id="contacts" class="tab-pane fade">
     <h3>Menu 1</h3>
     <p>Some content in menu 1.</p>
+    <div class="pull-left"><a id="settings" href="#">Settings</a></div>
+    <div class="pull-right"><a id="settings" href="#">Settings</a></div>
   </div>
 </div>
-<button id="saveme" type="button">Submit</button>
+
+</div>
 </body>

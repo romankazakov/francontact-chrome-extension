@@ -1,6 +1,5 @@
-$( document ).ready(function() {
-    $('.saveme').click(function(){
-        debugger;
+$(document).ready(function() {
+    $('#saveme').click(function(){
     	console.log('121212');
     });
 });
