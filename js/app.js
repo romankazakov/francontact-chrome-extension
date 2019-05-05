@@ -1,7 +1,5 @@
 class App {
-    constructor() {
-
-    }
+    constructor() {}
 
     getCookie() {
         return "SomeThing"; 

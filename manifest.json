@@ -21,8 +21,9 @@
     "default_popup": "src/browser_action/browser_action.html"
   },
   "permissions": [
-    "contextMenus",
-    "cookies"
+    "cookies",
+    "*://*.francontact.com/",
+    "contextMenus"
   ],
   "content_scripts": [
     {
