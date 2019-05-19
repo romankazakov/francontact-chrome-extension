@@ -6,8 +6,10 @@
 
 <script src="../../js/jquery.min.js"></script>
 <script src="../../js/bootstrap.min.js"></script>
-<script src="../../js/app.js"></script>
+<script src="../../js/axios.min.js"></script>
+<script src="../../js/user.js"></script>
 <script src="../../js/bindings.js"></script>
+<script src="../../js/promise.js"></script>
 
 </head>
 
@@ -23,21 +25,16 @@
   </li>
 </ul>
 
-<div class="tab-content padding20">
+<div id="appTab" class="tab-content padding20">
   <div id="tasks" class="tab-pane fade in active">
-     <h3>Menu 1</h3>
-     <p>Some content.</p>
-      <button id="saveme">GetCookie</button>
-  	 <div class="pull-left"><a id="settings"href="#">Settings</a></div>
-  	 <div class="pull-right"><a id="settings" href="#">Settings</a></div>
+      <iframe width="500px" src="https://dev.francontact.com/admin/main.php?action=ws_task&view-type=plugin#mainpage"></iframe>
   </div>
   <div id="contacts" class="tab-pane fade">
-    <h3>Menu 1</h3>
-    <p>Some content in menu 1.</p>
-    <div class="pull-left"><a id="settings" href="#">Settings</a></div>
-    <div class="pull-right"><a id="settings" href="#">Settings</a></div>
+      <iframe width="500px" src="https://dev.francontact.com/admin/main.php?action=subscriber&view-type=plugin#list"></iframe>
   </div>
+  <div class="pull-left"><a id="settings" href="/src/options_custom/index.html">Settings</a></div>
+  <div class="pull-right"><a target="_blank" id="link2app" href="#">Link to app</a></div>
+  <div class="pull-right"><a target="_blank" id="link2click" href="#">Link to click</a></div>
 </div>
-
 </div>
 </body>
