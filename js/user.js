@@ -21,12 +21,62 @@ class User {
     }
 
     displayTabs(){
-        $('#appTab').show();
+        $('#tasksFrame').show();
+        $('#contactsFrame').show();
+        $('.pleaselogin').hide();
     }
 
     hideTabs(){
-        $('#appTab').hide();
+        $('#tasksFrame').hide();
+        $('#contactsFrame').hide();
+        $('.pleaselogin').show();
     }
 
+    getLogInUrl(){
+        return `https://${this.getUserDomain().toLowerCase()}.francontact.com/admin/`;
+    }
 
+    getTaskTabUrl(){
+        return `https://${this.getUserDomain().toLowerCase()}.francontact.com/admin/main.php?action=ws_task&view-type=plugin#mainpage`;
+    }
+
+    getContactsTabUrl(){
+        return `https://${this.getUserDomain().toLowerCase()}.francontact.com/admin/main.php?action=ws_task&view-type=plugin#list`;
+    }
+
+    checkUserLogedIn(){
+        let user = this;
+        let pro = new Promise(function (resolve, reject) {
+            chrome.cookies.get({"url": user.getFullUserDomain(), "name": 'em_acp_globalauth_cookie'}, function(cookie) {
+                if(cookie !== null && "value" in cookie && cookie.value) {
+                    resolve(cookie.value);
+                } else {
+                    reject();
+                }
+            });
+        });
+
+        pro.then(function(value){
+            let instance = axios.create({
+                timeout: 1000,
+                withCredentials: true,
+                mode: 'no-cors',
+                headers: {
+                    //'Set-Cookie':'em_acp_globalauth_cookie='+value,
+                    'Access-Control-Allow-Origin': '*',
+                    //'Access-Control-Allow-Credentials':true
+                }
+            });
+            return instance.get( user.getLoginCheckUrl() );
+        },function(){
+            user.hideTabs();
+        }).then(function(response){
+            //ok user is loged in
+            'ok' == response.data ? user.displayTabs() : user.hideTabs();
+        },function (){
+            //wrong request
+            user.hideTabs();
+        });
+
+    }
 }

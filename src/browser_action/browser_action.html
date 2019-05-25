@@ -27,14 +27,19 @@
 
 <div id="appTab" class="tab-content padding20">
   <div id="tasks" class="tab-pane fade in active">
-      <iframe width="500px" src="https://dev.francontact.com/admin/main.php?action=ws_task&view-type=plugin#mainpage"></iframe>
+      <iframe id="tasksFrame" width="500px" src="#"></iframe>
+      <div class='pleaselogin'>
+          <span>Please login in to </span><a target='_blank' class='account_url' href='#'>account</a>
+      </div>
   </div>
   <div id="contacts" class="tab-pane fade">
-      <iframe width="500px" src="https://dev.francontact.com/admin/main.php?action=subscriber&view-type=plugin#list"></iframe>
+      <iframe id="contactsFrame" width="500px" src="#"></iframe>
+      <div class='pleaselogin'>
+          <span>Please login in to </span><a target='_blank' class='account_url' href='#'>account</a>
+      </div>
   </div>
   <div class="pull-left"><a id="settings" href="/src/options_custom/index.html">Settings</a></div>
   <div class="pull-right"><a target="_blank" id="link2app" href="#">Link to app</a></div>
-  <div class="pull-right"><a target="_blank" id="link2click" href="#">Link to click</a></div>
 </div>
 </div>
 </body>

@@ -9,3 +9,11 @@
 .padding20 {
 	padding:20px;
 }
+
+#tasksFrame {
+	width: 500px;
+}
+
+#contactsFrame {
+	width: 500px;
+}
