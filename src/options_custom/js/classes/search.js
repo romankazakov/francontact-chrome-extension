@@ -29,14 +29,15 @@
                 this.find(event.target.get("value"));
             }).bind(this);
             
-            this.search.addEvent("keyup", (function (event) {
+            /*this.search.addEvent("keyup", (function (event) {
                 if (event.key === "esc") {
                     this.reset();
                 } else {
                     find(event);
                 }
-            }).bind(this));
-            this.search.addEventListener("search", find, false);
+            }).bind(this));*/
+
+            /*this.search.addEventListener("search", find, false);*/
         },
         
         "bind": function (tab) {

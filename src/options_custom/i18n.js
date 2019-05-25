@@ -1,20 +1,25 @@
 // SAMPLE
 this.i18n = {
+    "domain": {
+        "en": "Domain",
+        "de": "Domain"
+    },
     "settings": {
-        "en": "Settings",
+        "en": "FranContact",
         "de": "Optionen"
     },
     "search": {
         "en": "Search",
         "de": "Suche"
     },
+    "yourdomain":{
+        "en": "User domain https://HERE-IT-IS.francontact.com",
+        "de": "User domain https://HERE-IT-IS.francontact.com"
+    },
     "nothing-found": {
         "en": "No matches were found.",
         "de": "Keine Übereinstimmungen gefunden."
     },
-    
-    
-    
     "information": {
         "en": "Information",
         "de": "Information"

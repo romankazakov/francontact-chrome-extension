@@ -11,11 +11,11 @@ window.addEvent("domready", function () {
     var settings = new FancySettings("My Extension", "icon.png");
     
     var username = settings.create({
-        "tab": i18n.get("information"),
-        "group": i18n.get("Domain"),
+        "tab": i18n.get("domain"),
+        "group": '',
         "name": "userdomain",
         "type": "text",
-        "label": i18n.get("Domain"),
+        "label": i18n.get("yourdomain"),
         "text": i18n.get("YourSubDomain")
     });
     
@@ -53,7 +53,7 @@ window.addEvent("domready", function () {
     });
     */
     settings.align([
-        username,
+        username
     ]);
 
 });

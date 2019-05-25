@@ -1,5 +1,9 @@
 $(document).ready(function() {
-    let user = new User('dev');
+    let setting = new Settings();
+
+    let user = new User(
+        setting.getUserDomain()
+    );
 
     $('#settings').click(function () {
         if (chrome.runtime.openOptionsPage) {
