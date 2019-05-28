@@ -5,9 +5,8 @@ chrome.runtime.onInstalled.addListener(function() {
         type: 'normal',
         contexts: ["page"],
         visible:true
-      }, function(){
-      	console.log('Some string !!!');
-      });
+      }, function(){}
+      );
 });
 
 chrome.tabs.onCreated.addListener(function(){
