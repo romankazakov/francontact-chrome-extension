@@ -48,7 +48,7 @@ class User {
         let user = this;
         let pro = new Promise(function (resolve, reject) {
             chrome.cookies.get({"url": user.getFullUserDomain(), "name": 'em_acp_globalauth_cookie'}, function(cookie) {
-                if(cookie !== null && "value" in cookie && cookie.value) {
+                if(cookie !== undefined && cookie !== null && "value" in cookie && cookie.value) {
                     resolve(cookie.value);
                 } else {
                     reject();

@@ -1,7 +1,7 @@
 $(document).ready(function() {
     let setting = new Settings();
 
-    let user = new User(
+    var user = new User(
         setting.getUserDomain()
     );
 
