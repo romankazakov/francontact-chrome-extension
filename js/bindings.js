@@ -19,12 +19,24 @@ $(document).ready(function() {
 
     $('#link2app').attr('href', user.isUserDomainSetup() ? user.getFullUserDomain() : '#' );
 
+    console.log(user.isUserDomainSetup());
+
+    if (user.isUserDomainSetup()) {
+        $('.setupdomain').hide();
+    } else {
+        $('.setupdomain').show();
+    }
+
     $('.account_url').attr('href', user.getLogInUrl() );
 
     $('#tasksFrame').attr('src',user.getTaskTabUrl() );
 
-    $('#contactsFrame').attr('src', user.getContactsTabUrl() );
 
+    let fromTo = setting.getFromAndTo();
+
+    let additionalGmailString = fromTo !== null ? user.getSenderRecipient(fromTo.from , fromTo.to) : '';
+
+    $('#contactsFrame').attr('src', user.getContactsTabUrl() + additionalGmailString );
     user.checkUserLogedIn();
 });
 

@@ -10,6 +10,8 @@
   "default_locale": "en",
   "background": {
     "scripts": [
+      "js/values.js",
+      "js/settings.js",
       "src/bg/background.js"
     ],
     "persistent": true
@@ -35,6 +37,8 @@
         "https://mail.google.com/*"
       ],
       "js": [
+        "js/values.js",
+        "js/settings.js",
         "js/inboxSdk.js",
         "js/inboxInit.js"
       ],

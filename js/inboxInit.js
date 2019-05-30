@@ -1,16 +1,8 @@
-alert('in');
-InboxSDK.load(2, 'francontact').then(sdk => {
-    alert('loaded');
+InboxSDK.load(2, 'francontact').then(function(sdk){
     sdk.Conversations.registerMessageViewHandler(function(messageView){
-        var sender = messageView.getSender();
-
-        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-            alert('Tabs!');
-            var currTab = tabs[0];
-            if (currTab) { // Sanity check
-                alert(currTab + ' ' + sender.emailAddress);
-            }
-        });
-        // {emailAddress:'some@email.com', name: 'Some Name'}
+        let sender = messageView.getSender();
+        chrome.runtime.sendMessage('',
+                {'from' : sender.emailAddress, 'to' : sdk.User.getEmailAddress() }
+        );
     });
 });

@@ -41,7 +41,15 @@ class User {
     }
 
     getContactsTabUrl(){
-        return `https://${this.getUserDomain().toLowerCase()}.francontact.com/admin/main.php?action=ws_task&view-type=plugin#list`;
+        return `https://${this.getUserDomain().toLowerCase()}.francontact.com/admin/main.php?action=subscriber&view-type=plugin#list`;
+    }
+
+    getContactsTabUrl(){
+        return `https://${this.getUserDomain().toLowerCase()}.francontact.com/admin/main.php?action=subscriber&view-type=plugin#list`;
+    }
+
+    getSenderRecipient(from, to){
+        return encodeURI(`&sender=${from}&recipient=${to}`);
     }
 
     checkUserLogedIn(){
@@ -69,6 +77,7 @@ class User {
             });
             return instance.get( user.getLoginCheckUrl() );
         },function(){
+            //no cookie
             user.hideTabs();
         }).then(function(response){
             //ok user is loged in
