@@ -44,8 +44,8 @@ class User {
         return `https://${this.getUserDomain().toLowerCase()}.francontact.com/admin/main.php?action=subscriber&view-type=plugin#list`;
     }
 
-    getContactsTabUrl(){
-        return `https://${this.getUserDomain().toLowerCase()}.francontact.com/admin/main.php?action=subscriber&view-type=plugin#list`;
+    getSubsribersURL(text){
+        return this.getContactsTabUrl()+`&lookup=${text}`;
     }
 
     getSenderRecipient(from, to){

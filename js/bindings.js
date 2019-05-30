@@ -19,8 +19,6 @@ $(document).ready(function() {
 
     $('#link2app').attr('href', user.isUserDomainSetup() ? user.getFullUserDomain() : '#' );
 
-    console.log(user.isUserDomainSetup());
-
     if (user.isUserDomainSetup()) {
         $('.setupdomain').hide();
     } else {
