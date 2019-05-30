@@ -49,7 +49,9 @@ class User {
     }
 
     getSenderRecipient(from, to){
-        return encodeURI(`&sender=${from}&recipient=${to}`);
+        from = encodeURI(from);
+        to = encodeURI(to);
+        return `&sender=${from}&recipient=${to}`;
     }
 
     checkUserLogedIn(){
