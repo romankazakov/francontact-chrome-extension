@@ -10,9 +10,14 @@
 <script src="../../js/axios.min.js"></script>
 <script src="../../js/inboxSdk.js"></script>
 <script src="../../js/settings.js"></script>
+
+<script src="../options_custom/i18n.js"></script>
+<script src="../options_custom/js/i18n.js"></script>
+
 <script src="../../js/user.js"></script>
-<script src="../../js/bindings.js"></script>
 <script src="../../js/values.js"></script>
+<script src="../../js/app.js"></script>
+<script src="../../js/bindings.js"></script>
 </head>
 
 <body>
@@ -20,10 +25,10 @@
 
 <ul class="nav nav-tabs width560">
   <li class="active width50percents">
-  	<a data-toggle="tab" href="#tasks">Tasks</a>
+  	<a id='tasks' data-toggle="tab" href="#tasks">Tasks</a>
   </li>
   <li class="width50percents">
-  	<a data-toggle="tab" href="#contacts">Contacts</a>
+  	<a id='contacts' data-toggle="tab" href="#contacts">Contacts</a>
   </li>
 </ul>
 
@@ -31,17 +36,14 @@
   <div id="tasks" class="tab-pane fade in active">
       <iframe id="tasksFrame" src="#" width="100%" height="500px" frameborder="0"></iframe>
       <div class='pleaselogin'>
-          <span>Please login in to </span><a target='_blank' class='account_url' href='#'>account</a>
+          <span id="pleaselogin">Please login in to</span><a target='_blank' id='account' class='account_url' href='#'>account</a>
       </div>
       <div class='setupdomain'>
-          <span>Please setup domain in settings</span>
+          <span id="pleasesetup">Please setup domain in settings</span>
       </div>
   </div>
   <div id="contacts" class="tab-pane fade">
       <iframe id="contactsFrame" src="#" width="100%" height="500px" frameborder="0"></iframe>
-      <div class='pleaselogin'>
-          <span>Please login in to </span><a target='_blank' class='account_url' href='#'>account</a>
-      </div>
   </div>
   <div class="pull-left"><a id="settings" href="/src/options_custom/index.html">Settings</a></div>
   <div class="pull-right"><a target="_blank" id="link2app" href="#">Link to app</a></div>

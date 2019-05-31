@@ -34,6 +34,10 @@ $(document).ready(function() {
     let additionalGmailString = fromTo !== null ? user.getSenderRecipient(fromTo.from , fromTo.to) : '';
 
     $('#contactsFrame').attr('src', user.getContactsTabUrl() + additionalGmailString );
+
+    let app = new App(i18n);
+    app.setUpTextLiterals();
+
     user.checkUserLogedIn();
 });
 

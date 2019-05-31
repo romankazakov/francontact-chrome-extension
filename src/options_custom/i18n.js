@@ -1,28 +1,44 @@
 // SAMPLE
 this.i18n = {
-    "domain": {
-        "en": "Domain",
-        "de": "Domain"
+    "tasks": {
+        "en": "Tasks",
+        "fr": "Tasks Fr"
+    },
+    "contacts": {
+        "en": "Contacts",
+        "fr": "Contacts Fr"
     },
     "settings": {
-        "en": "FranContact",
-        "de": "Optionen"
+        "en": "Settings",
+        "fr": "Settings Fr"
+    },
+    "linktoapp": {
+        "en": "Link to app",
+        "fr": "Link to app fr"
+    },
+    "domain": {
+        "en": "Domain",
+        "fr": "Domain fr"
     },
     "search": {
         "en": "Search",
         "de": "Suche"
     },
-    "yourdomain":{
+    "account": {
+        "en": "account",
+        "fr": "account fr"
+    },
+    "yourdomain": {
         "en": "User domain https://HERE-IT-IS.francontact.com",
-        "de": "User domain https://HERE-IT-IS.francontact.com"
+        "fr": "User domain https://HERE-IT-IS.francontact.com fr"
     },
-    "nothing-found": {
-        "en": "No matches were found.",
-        "de": "Keine Übereinstimmungen gefunden."
+    "pleasesetup": {
+        "en": "Please setup domain in settings",
+        "fr": "Please setup domain in settings FR"
     },
-    "information": {
-        "en": "Information",
-        "de": "Information"
+    "pleaselogin": {
+        "en": "Please login in to",
+        "fr": "Please login in to FR"
     },
     "login": {
         "en": "Login",
