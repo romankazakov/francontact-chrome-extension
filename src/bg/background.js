@@ -38,6 +38,9 @@ chrome.tabs.onRemoved.addListener(function(tabid, removed) {
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         let settings = new Settings();
+        let user = new User(
+            settings.getUserDomain()
+        );
         if ('gmail' == request.msgType) {
             settings.setFromAndTo( JSON.stringify(request));
             let emailValues = new Values();
@@ -51,8 +54,8 @@ chrome.runtime.onMessage.addListener(
                 }
             });
         } else if ('copytext' == request.msgType) {
-            let user = new User();
-            chrome.tabs.create({ url: user.getSubsribersURL });
+            let url = user.getSubsribersURL(request.selectedText);
+            chrome.tabs.create({'url': url });
         }
     }
 );

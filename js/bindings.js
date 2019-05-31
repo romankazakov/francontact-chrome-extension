@@ -1,11 +1,10 @@
 $(document).ready(function() {
     let setting = new Settings();
-
     var user = new User(
         setting.getUserDomain()
     );
 
-    $('#settings').click(function () {
+    $('#settings').click(function() {
         if (chrome.runtime.openOptionsPage) {
             chrome.runtime.openOptionsPage();
         } else {
