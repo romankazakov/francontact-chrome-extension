@@ -26,8 +26,7 @@ $(document).ready(function() {
 
     $('.account_url').attr('href', user.getLogInUrl() );
 
-    $('#tasksFrame').attr('src',user.getTaskTabUrl() );
-
+    $('#tasksFrame').attr('src', user.getTaskTabUrl() );
 
     let fromTo = setting.getFromAndTo();
 
