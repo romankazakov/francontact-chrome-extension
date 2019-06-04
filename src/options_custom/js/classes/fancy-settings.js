@@ -96,7 +96,7 @@
             
             settings.each(function (setting) {
                 if (setting.params.type !== type) {
-                    throw "multipleTypes";
+                    throw "multipleTypes " + setting.params.type + ' ' + type;
                 }
                 
                 var width = setting.label.offsetWidth;

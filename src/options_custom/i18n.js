@@ -1,44 +1,56 @@
 // SAMPLE
 this.i18n = {
+    "main":{
+        "en":"Main",
+        "fr":"Principal"
+    },
+    "language":{
+        "en":"Language",
+        "fr":"Le langage"
+    },
     "tasks": {
         "en": "Tasks",
-        "fr": "Tasks Fr"
+        "fr": "Tâches"
     },
     "contacts": {
         "en": "Contacts",
-        "fr": "Contacts Fr"
+        "fr": "Contacts"
     },
     "settings": {
         "en": "Settings",
-        "fr": "Settings Fr"
+        "fr": "Réglages"
     },
     "linktoapp": {
         "en": "Link to app",
-        "fr": "Link to app fr"
+        "fr": "Lien vers l'application"
     },
     "domain": {
         "en": "Domain",
-        "fr": "Domain fr"
+        "fr": "Domaine"
     },
     "search": {
         "en": "Search",
-        "de": "Suche"
+        "de": "Recherche"
     },
     "account": {
         "en": "account",
-        "fr": "account fr"
+        "fr": "compte"
     },
     "yourdomain": {
-        "en": "User domain https://HERE-IT-IS.francontact.com",
-        "fr": "User domain https://HERE-IT-IS.francontact.com fr"
+        "en": "User domain",
+        "fr": "Domaine"
+    },
+    'domainplaceholder':{
+        "en":"https://here-it-is.francontact.com",
+        "de":"https://here-it-is.francontact.com"
     },
     "pleasesetup": {
         "en": "Please setup domain in settings",
-        "fr": "Please setup domain in settings FR"
+        "fr": "S'il vous plait configurez le domaine dans les réglages"
     },
     "pleaselogin": {
         "en": "Please login in to",
-        "fr": "Please login in to FR"
+        "fr": "S'il vous plait connectez-vous sur"
     },
     "login": {
         "en": "Login",

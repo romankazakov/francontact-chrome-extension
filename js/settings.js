@@ -14,6 +14,11 @@ class Settings {
         return fromTo !== null && fromTo.length > 1 ? JSON.parse(fromTo) : null;
     }
 
+    getLang(){
+        let lang = localStorage.getItem('store.settings.lang');
+        return lang === null ? 'en' : lang.replace(/"/g,'');
+    }
+
     setSelectedText(text){
         localStorage.setItem('user.settings.selectedtext', text);
     }

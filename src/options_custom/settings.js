@@ -1,14 +1,14 @@
 window.addEvent("domready", function () {
     // Option 1: Use the manifest:
-    /*new FancySettings.initWithManifest(function (settings) {
-        settings.manifest.myButton.addEvent("action", function () {
-            alert("You clicked me!");
+    let some = new FancySettings.initWithManifest(function (settings) {
+        settings.manifest.lang.addEvent("action", function (something) {
+            window.location.href = window.location.href;
         });
-    });*/
+    });
     
     // Option 2: Do everything manually:
 
-    var settings = new FancySettings("FranContact Settings", "../../icons/favicon16.png");
+    /*var settings = new FancySettings("FranContact Settings", "../../icons/favicon16.png");
     
     var username = settings.create({
         "tab": i18n.get("domain"),
@@ -16,20 +16,20 @@ window.addEvent("domready", function () {
         "name": "userdomain",
         "type": "text",
         "label": i18n.get("yourdomain"),
-        "text": i18n.get("YourSubDomain")
+        "text": "https://here-it-is.francontact.com"
     });
     
-    /*var password = settings.create({
-        "tab": i18n.get("information"),
-        "group": i18n.get("login"),
-        "name": "password",
-        "type": "text",
-        "label": i18n.get("password"),
-        "text": i18n.get("x-characters-pw"),
+    var langSwitcher = Bundle.RadioButtons.create({
+        "tab"   : i18n.get("domain"),//i18n.get("Language"),
+        "group" : '',
+        "name"  : "lang",
+        "type"  : "radioButtons",
+        "label" : i18n.get("Language"),
+        "text"  : "https://here-it-is.francontact.com",
         "masked": true
-    });
+    });*/
     
-    var myDescription = settings.create({
+    /*var myDescription = settings.create({
         "tab": i18n.get("information"),
         "group": i18n.get("login"),
         "name": "myDescription",
@@ -51,9 +51,8 @@ window.addEvent("domready", function () {
     myButton.addEvent("action", function () {
         alert("You clicked me!");
     });
-    */
     settings.align([
-        username
-    ]);
-
+        username,
+        langSwitcher
+    ]);*/
 });

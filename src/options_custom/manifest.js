@@ -1,20 +1,33 @@
 // SAMPLE
 this.manifest = {
-    "name": "My Extension",
-    "icon": "icon.png",
+    "name": "FranContact " + i18n.get("settings"),
+    "icon": "../../icons/favicon16.png",
     "settings": [
         {
-            "tab": i18n.get("domain"),
-            "group": i18n.get("login"),
+            "tab": i18n.get('main'),
+            "group": '',
             "name": "userdomain",
             "type": "text",
-            "label": i18n.get("username"),
-            "text": i18n.get("x-characters")
+            "label": i18n.get("yourdomain"),
+            "text": i18n.get("domainplaceholder")
         },
-    ],
-    "alignment": [
-        [
-            "userdomain"
-        ]
+        {
+            "tab": i18n.get('main'),
+            "group": '',
+            "name": "lang",
+            "type": "radioButtons",
+            "label": i18n.get("language"),
+            "text": i18n.get("x-characters"),
+            "options": [
+                    {
+                        "value": "en",
+                        "text": "En",
+                    },
+                    {
+                        "value": "fr",
+                        "text": 'Fr',
+                    }
+            ]
+        },
     ]
 };

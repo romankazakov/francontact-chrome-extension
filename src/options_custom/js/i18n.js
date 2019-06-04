@@ -4,7 +4,9 @@
 // License: LGPL v2.1
 //
 (function () {
-    var lang = navigator.language;
+    let set = new Settings();
+    let lang = set.getLang();
+
     if (this.i18n === undefined) { this.i18n = {}; }
     this.i18n.get = function (value) {
         if (value === "lang") {
