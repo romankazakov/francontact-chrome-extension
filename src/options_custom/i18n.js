@@ -10,7 +10,7 @@ this.i18n = {
     },
     "tasks": {
         "en": "Tasks",
-        "fr": "Tâches"
+        "fr": "T\u00E2ches"
     },
     "contacts": {
         "en": "Contacts",
@@ -18,7 +18,7 @@ this.i18n = {
     },
     "settings": {
         "en": "Settings",
-        "fr": "Réglages"
+        "fr": "R\u00E9glages"
     },
     "linktoapp": {
         "en": "Link to app",
@@ -46,7 +46,7 @@ this.i18n = {
     },
     "pleasesetup": {
         "en": "Please setup domain in settings",
-        "fr": "S'il vous plait configurez le domaine dans les réglages"
+        "fr": "S'il vous plait configurez le domaine dans les r\u00E9glages"
     },
     "pleaselogin": {
         "en": "Please login in to",

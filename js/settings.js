@@ -1,5 +1,4 @@
 class Settings {
-
     getUserDomain(){
         let userDomain = localStorage.getItem('store.settings.userdomain');
         return userDomain === null ? '' : userDomain.replace(/"/g,'');
@@ -17,13 +16,5 @@ class Settings {
     getLang(){
         let lang = localStorage.getItem('store.settings.lang');
         return lang === null ? 'en' : lang.replace(/"/g,'');
-    }
-
-    setSelectedText(text){
-        localStorage.setItem('user.settings.selectedtext', text);
-    }
-
-    getSelectedText(){
-        localStorage.getItem('user.settings.selectedtext');
     }
 }
